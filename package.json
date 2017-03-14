@@ -3,7 +3,6 @@
   "version": "0.5.4",
   "description": "A websocket transport for GraphQL subscriptions",
   "main": "dist/index.js",
-  "browser": "dist/client.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/apollostack/subscriptions-transport-ws.git"
@@ -29,8 +28,7 @@
     "coverage": "node ./node_modules/istanbul/lib/cli.js cover _mocha -- --full-trace ./dist/test/tests.js",
     "postcoverage": "remap-istanbul --input coverage/coverage.raw.json --type lcovonly --output coverage/lcov.info",
     "browser-compile": "webpack --config \"./unpkg-webpack.config.js\"",
-    "prepublish": "npm run compile && npm run browser-compile",
-    "install": "npm run compile"
+    "prepublish": "npm run compile && npm run browser-compile"
   },
   "devDependencies": {
     "@types/chai": "^3.4.35",
