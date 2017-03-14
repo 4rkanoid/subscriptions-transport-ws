@@ -188,14 +188,7 @@ export class SubscriptionClient {
         break;
       case this.client.CONNECTING:
         this.unsentMessagesQueue.push(message);
-
         break;
-      case this.client.CLOSING:
-      case this.client.CLOSED:
-      default:
-        if (!this.reconnecting) {
-          throw new Error('Client is not connected to a websocket.');
-        }
     }
   }
 
@@ -221,7 +214,7 @@ export class SubscriptionClient {
       return;
     }
     if (this.backoff.attempts > this.reconnectionAttempts) {
-      return;
+
     }
 
     if (!this.reconnecting) {
