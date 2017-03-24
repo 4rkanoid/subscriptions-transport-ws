@@ -205,6 +205,7 @@ var SubscriptionClient = (function () {
                 case messageTypes_1.SUBSCRIPTION_DATA:
                     var payloadData = parsedMessage.payload.data || null;
                     var payloadErrors = parsedMessage.payload.errors ? _this.formatErrors(parsedMessage.payload.errors) : null;
+                    console.log(_this.subscriptions, subId);
                     _this.subscriptions[subId].handler(payloadErrors, payloadData);
                     break;
                 case messageTypes_1.KEEPALIVE:
