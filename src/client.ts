@@ -276,7 +276,7 @@ export class SubscriptionClient {
         }
       }
 
-      // console.log('MSG', JSON.stringify(parsedMessage, null, 2));
+      console.log('MSG', JSON.stringify(parsedMessage, null, 2));
       switch (parsedMessage.type) {
         case INIT_FAIL:
           if (this.connectionCallback) {
@@ -301,7 +301,7 @@ export class SubscriptionClient {
         case SUBSCRIPTION_DATA:
           const payloadData = parsedMessage.payload.data || null;
           const payloadErrors = parsedMessage.payload.errors ? this.formatErrors(parsedMessage.payload.errors) : null;
-          console.log(this.subscriptions, subId);
+
           this.subscriptions[subId].handler(payloadErrors, payloadData);
           break;
         case KEEPALIVE:
