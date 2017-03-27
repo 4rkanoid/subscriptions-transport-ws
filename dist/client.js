@@ -183,7 +183,6 @@ var SubscriptionClient = (function () {
                     return;
                 }
             }
-            console.log('MSG', JSON.stringify(parsedMessage, null, 2));
             switch (parsedMessage.type) {
                 case messageTypes_1.INIT_FAIL:
                     if (_this.connectionCallback) {

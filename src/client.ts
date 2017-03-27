@@ -276,7 +276,6 @@ export class SubscriptionClient {
         }
       }
 
-      console.log('MSG', JSON.stringify(parsedMessage, null, 2));
       switch (parsedMessage.type) {
         case INIT_FAIL:
           if (this.connectionCallback) {
