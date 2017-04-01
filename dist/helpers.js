@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var printer_1 = require("graphql-tag/printer");
+var printer_1 = require("graphql/language/printer");
 function addGraphQLSubscriptions(networkInterface, wsClient) {
     return Object.assign(networkInterface, {
         subscribe: function (request, handler) {
