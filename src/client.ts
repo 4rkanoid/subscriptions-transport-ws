@@ -261,6 +261,7 @@ export class SubscriptionClient {
     };
 
     this.client.onmessage = ({ data }: {data: any}) => {
+      console.log("message", data);
       let parsedMessage: any;
       try {
         parsedMessage = JSON.parse(data);

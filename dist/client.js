@@ -169,6 +169,7 @@ var SubscriptionClient = (function () {
         };
         this.client.onmessage = function (_a) {
             var data = _a.data;
+            console.log("message", data);
             var parsedMessage;
             try {
                 parsedMessage = JSON.parse(data);
